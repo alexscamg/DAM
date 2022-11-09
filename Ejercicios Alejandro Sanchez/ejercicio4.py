@@ -27,6 +27,16 @@ def tableroajedrez():
       return 'Tu casilla es: Negro'
   
 print(tableroajedrez())
+
+
+
+def tableroajedrez2():
+  
+  tablero = {
+
+  }
+
+
   
   
   
