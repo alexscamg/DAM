@@ -1,6 +1,6 @@
 #Tipos mutables (Listas)
 
-#Tipos inmutables ( Numeros, Cadenas de texto)
+#Tipos inmutables ( Números, Cadenas de texto)
 
 
 numero = 0
@@ -13,11 +13,11 @@ cadena = 'Esto es un experimento con cadenas'
 largo = len(cadena)
 
 print(len(cadena))
-#Encontramos en que posicion se encuentra nuestra palabra
+#Encontramos en que posición se encuentra nuestra palabra
 posicion = cadena.find('experimento')
 print(posicion)
 
-#Una vez tenemos la posicion, cambiamos la palabra
+#Una vez tenemos la posición, cambiamos la palabra
 corte = '--------------------'
 print(corte)
 #salida
