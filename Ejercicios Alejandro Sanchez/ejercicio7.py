@@ -20,12 +20,11 @@ def entradas():
   usuarios_gene = 23.00
   # Declaramos una variable para la suma de los tickets
   total = 0
-  # Comprobamos que la edad no es menor que 0 ni es 0. Si es 0 o menor, volvemos a pedir la edad
+  # Comprobamos que la edad no es menor que 0, ni es 0. Si es 0 o menor, volvemos a pedir la edad
   while edades <= 0:
     edades = int(input('Introduce una edad mayor que 0: '))
   # Cuando tenemos la primera edad la vamos clasificando para ver el precio de su entrada.
   while edades > 0:
-    
     if edades <= 2:
       total += bebes
     elif edades >= 3 and edades <=12:

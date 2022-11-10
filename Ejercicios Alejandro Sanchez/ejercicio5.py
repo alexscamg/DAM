@@ -11,6 +11,9 @@ def promedio():
   suma = 0
   # Aquí vamos apuntando cuantos números hemos introducido
   factores = 0
+  # Si es un numero negativo nos sigue pidiendo el numero
+  while numeros <0:
+    numeros = int(input('Introduce un numero mayor que cero: '))
   # Vemos si el numero es igual que 0, si es asi decimos que no se puede calcular el promedio de 0
   if numeros == 0:
     return 'No se puede calcular el promedio de 0'
