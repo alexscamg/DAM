@@ -10,41 +10,6 @@ El costo debe mostrarse con dos decimales."""
 
 
 # Declaramos la función
-"""
-def entradas():
-  # Pedimos la edad del primer usuario
-  edades = int(input('Introduce la edad de un usuario: '))
-  # Declaramos los precios
-  bebes = 0
-  niños = 14.00
-  jubilados = 18.00
-  usuarios_gene = 23.00
-  # Declaramos una variable para la suma de los tickets
-  total = 0
-  # Comprobamos que la edad no es menor que 0, ni es 0. Si es 0 o menor, volvemos a pedir la edad
-  while edades <= 0:
-    edades = int(input('Introduce una edad mayor que 0: '))
-  # Cuando tenemos la primera edad la vamos clasificando para ver el precio de su entrada.
-  while edades > 0:
-    if edades <= 2:
-      total += bebes
-    elif edades >= 3 and edades <=12:
-      total += niños
-    elif edades >= 65:
-      total += jubilados
-    else:
-      total += usuarios_gene
-    # Volvemos a pedir si quiere introducir mas usuarios, si no introduce 0.
-    edades = int(input('Introduce mas usuarios de tu grupo, introduce 0 si no hay mas usuarios: '))
-  # Retornamos el total de las entradas
-  return f'Total a pagar: {total}€'
-
-
-
-
-print(entradas())"""
-
-
 def entradas():
   # Pedimos la edad del primer usuario
   edades = int(input('Introduce la edad de un usuario: '))
@@ -69,7 +34,7 @@ def entradas():
       total += jubilados
     else:
       total += usuarios_gene
-    # Volvemos a pedir si quiere introducir mas usuarios, si no introduce 0.
+    # Volvemos a pedir si quiere introducir mas usuarios, si no teclea intro.
     edades = input('Introduce mas usuarios de tu grupo, introduce 0 si no hay mas usuarios: ')
   # Retornamos el total de las entradas
   return f'Total a pagar: {total}€'
