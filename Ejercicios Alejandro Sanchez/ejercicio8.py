@@ -16,7 +16,6 @@ def suma():
     num = numeros[n]
     suma += int(num)
   return suma
-      
 
 
 print(suma())
