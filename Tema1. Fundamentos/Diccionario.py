@@ -22,9 +22,12 @@ coches = {
     '5454CDP': 'Tesla Model S',
     '8345GJJ': 'Tesla Model 3',
     '5456DSF': 'Tesla Model X',
-    '5465JHJ': 'Tesla MOdel y'
+    '5465JHJ': 'Tesla Model y'
 }
 
 coches['7676KHG'] = 'Porsche Panamera'
 print(list(coches.keys()))
 pprint.pprint(coches)
+
+
+# con index se busca en los diccionarios
