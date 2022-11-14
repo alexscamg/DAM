@@ -21,7 +21,6 @@ def diasmeses(mes):
       'Octubre': '31',
       'Noviembre': '30',
       'Diciembre' : '31'
-      
       }
   # Pasamos el mes del usuario a minúsculas y lo hacemos una variable
   mes = mes.capitalize()

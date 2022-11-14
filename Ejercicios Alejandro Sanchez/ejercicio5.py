@@ -6,14 +6,14 @@ Su programa debería mostrar un mensaje de error apropiado si el primer valor in
 # Declaramos la función
 def promedio():
   # Pedimos un numero para calcular el promedio
-  numeros = int(input('Introduce un numero para calcular el promedio: '))
+  numeros = float(input('Introduce un numero para calcular el promedio: '))
   # Aquí vamos sumando los números
   suma = 0
   # Aquí vamos apuntando cuantos números hemos introducido
   factores = 0
   # Si es un numero negativo nos sigue pidiendo el numero
   while numeros <0:
-    numeros = int(input('Introduce un numero mayor que cero: '))
+    numeros = float(input('Introduce un numero mayor que cero: '))
   # Vemos si el numero es igual que 0, si es asi decimos que no se puede calcular el promedio de 0
   if numeros == 0:
     return 'No se puede calcular el promedio de 0'
@@ -22,7 +22,7 @@ def promedio():
     suma += numeros
     factores +=1
     # Volvemos a pedir otro numero
-    numeros = int(input('Introduce otro numero: '))
+    numeros = float(input('Introduce otro numero: '))
   # Calculamos el promedio
   return suma/factores
 
