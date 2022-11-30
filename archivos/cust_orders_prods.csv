@@ -1,0 +1,59 @@
+customer_name,employee_name,order_date,quantity,unit_price,product_name
+Ming-Yang Xie,Nancy Freehafer,2006-03-24 0:00:00,3.000.000,460.000,Coffee
+Roland Wacker,Nancy Freehafer,2006-03-24 0:00:00,10.2000,250.000,Boysenberry Spread
+Roland Wacker,Nancy Freehafer,2006-03-24 0:00:00,10.2000,220.000,Cajun Seasoning
+Roland Wacker,Nancy Freehafer,2006-03-24 0:00:00,10.2000,9.2000,Chocolate Biscuits Mix
+Peter Krschne,Nancy Freehafer,2006-03-24 0:00:00,200.000,3.5000,Dried Plums
+Peter Krschne,Nancy Freehafer,2006-03-24 0:00:00,500.000,2.9900,Green Tea
+Anna Bedecs,Nancy Freehafer,2006-03-24 0:00:00,250.000,180.000,Chai
+Anna Bedecs,Nancy Freehafer,2006-03-24 0:00:00,250.000,460.000,Coffee
+Anna Bedecs,Nancy Freehafer,2006-03-24 0:00:00,250.000,2.9900,Green Tea
+Amritansh Raghav,Nancy Freehafer,2006-04-07 0:00:00,500.000,9.6500,Clam Chowder
+Amritansh Raghav,Nancy Freehafer,2006-04-07 0:00:00,500.000,184.000,Crab Meat
+Soo Jung Lee,Nancy Freehafer,2006-04-05 0:00:00,870.000,140.000,Beer
+Roland Wacker,Nancy Freehafer,2006-05-24 0:00:00,150.000,3.5000,Dried Plums
+Peter Krschne,Nancy Freehafer,2006-05-24 0:00:00,200.000,400.000,Curry Sauce
+Anna Bedecs,Nancy Freehafer,2006-05-24 0:00:00,400.000,184.000,Crab Meat
+Amritansh Raghav,Nancy Freehafer,2006-06-07 0:00:00,5.2000,460.000,Coffee
+Soo Jung Lee,Nancy Freehafer,2006-06-05 0:00:00,400.000,390.000,Fruit Cocktail
+Francisco Pérez-Olaeta,Andrew Cencini,2006-04-03 0:00:00,10.2000,12.7500,Chocolate
+Francisco Pérez-Olaeta,Andrew Cencini,2006-06-23 0:00:00,300.000,300.000,Dried Pears
+Francisco Pérez-Olaeta,Andrew Cencini,2006-06-23 0:00:00,300.000,530.000,Dried Apples
+Christina Lee,Andrew Cencini,2006-04-25 17:03:55,10.2000,380.000,Gnocchi
+Thomas Axen,Andrew Cencini,2006-04-25 17:26:53,0,2.9900,Green Tea
+Thomas Axen,Andrew Cencini,2006-04-25 17:26:53,0,380.000,Gnocchi
+Christina Lee,Jan Kotas,2006-10-12 0:00:00,10.2000,300.000,Dried Pears
+Christina Lee,Jan Kotas,2006-10-12 0:00:00,10.2000,530.000,Dried Apples
+Christina Lee,Jan Kotas,2006-10-12 0:00:00,10.2000,3.5000,Dried Plums
+Soo Jung Lee,Jan Kotas,2006-02-10 0:00:00,10.2000,12.7500,Chocolate
+Elizabeth Andersen,Jan Kotas,2006-03-22 0:00:00,1.000.000,12.7500,Chocolate
+Christina Lee,Jan Kotas,2006-04-22 0:00:00,400.000,810.000,Marmalade
+Christina Lee,Jan Kotas,2006-04-22 0:00:00,400.000,7.2000,Long Grain Rice
+John Edwards,Mariya Sergienko,2006-01-22 0:00:00,150.000,180.000,Chai
+John Edwards,Mariya Sergienko,2006-01-22 0:00:00,200.000,460.000,Coffee
+Thomas Axen,Mariya Sergienko,2006-02-23 0:00:00,2.000.000,9.6500,Clam Chowder
+Roland Wacker,Mariya Sergienko,2006-03-24 0:00:00,2.000.000,2.9900,Green Tea
+Elizabeth Andersen,Mariya Sergienko,2006-04-05 0:00:00,250.000,400.000,Curry Sauce
+Elizabeth Andersen,Mariya Sergienko,2006-04-05 0:00:00,250.000,9.2000,Chocolate Biscuits Mix
+Thomas Axen,Mariya Sergienko,2006-04-25 0:00:00,500.000,10.2000,Syrup
+Thomas Axen,Mariya Sergienko,2006-04-25 0:00:00,3.2000,400.000,Curry Sauce
+Roland Wacker,Mariya Sergienko,2006-05-24 0:00:00,200.000,10.2000,Almonds
+Elizabeth Andersen,Mariya Sergienko,2006-06-05 0:00:00,400.000,12.7500,Chocolate
+Elizabeth Andersen,Michael Neipper,2006-01-30 0:00:00,300.000,9.2000,Chocolate Biscuits Mix
+Francisco Pérez-Olaeta,Michael Neipper,2006-04-08 0:00:00,3.000.000,140.000,Beer
+Elizabeth Andersen,Michael Neipper,2006-04-30 0:00:00,400.000,348.000,Mozzarella
+Francisco Pérez-Olaeta,Michael Neipper,2006-06-08 0:00:00,400.000,12.7500,Chocolate
+Sven Mortensen,Robert Zare,2006-04-05 0:00:00,1.000.000,195.000,Ravioli
+Sven Mortensen,Robert Zare,2006-04-05 0:00:00,500.000,348.000,Mozzarella
+Sven Mortensen,Robert Zare,2006-06-05 0:00:00,10.2000,9.6500,Clam Chowder
+Francisco Pérez-Olaeta,Laura Giussani,2006-03-06 0:00:00,170.000,400.000,Curry Sauce
+Karen Toh,Anne Hellung-Larsen,2006-07-12 0:00:00,1.000.000,140.000,Beer
+Karen Toh,Anne Hellung-Larsen,2006-07-12 0:00:00,300.000,3.5000,Dried Plums
+Christina Lee,Anne Hellung-Larsen,2006-02-06 0:00:00,200.000,9.2000,Chocolate Biscuits Mix
+Amritansh Raghav,Anne Hellung-Larsen,2006-03-10 0:00:00,3.000.000,460.000,Coffee
+John Rodman,Anne Hellung-Larsen,2006-04-05 0:00:00,200.000,10.2000,Scones
+Run Liu,Anne Hellung-Larsen,2006-04-05 0:00:00,250.000,213.500,Olive Oil
+Run Liu,Anne Hellung-Larsen,2006-04-05 0:00:00,300.000,9.6500,Clam Chowder
+Run Liu,Anne Hellung-Larsen,2006-04-05 0:00:00,300.000,184.000,Crab Meat
+John Rodman,Anne Hellung-Larsen,2006-06-05 0:00:00,300.000,220.000,Cajun Seasoning
+Run Liu,Anne Hellung-Larsen,2006-06-05 0:00:00,900.000,250.000,Boysenberry Spread
