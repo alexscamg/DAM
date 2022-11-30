@@ -26,7 +26,7 @@ def por_ventas(resultado):
   """
   total_cantidad = 0
   total_vendedor = 0
-  for elem in resultado:                #accedemos a cada elemento de la lista (en este caso cada elemento es un diccionario)
+  for elem in resultado:                # Accedemos a cada elemento de la lista (en este caso cada elemento es un diccionario)
     cantidad = elem['quantity']
     x = cantidad.replace('.', '')
     total_cantidad += int(x)
@@ -37,7 +37,6 @@ def por_ventas(resultado):
   for n in resultado:                      # Iteramos el diccionario para sacar la info necesaria, hay que ver como ponerle los nombres automáticamente
     if "Anna Bedecs" in resultado[n]["customer_name"]:
         lista.append(int(resultado[n]["quantity"].replace('.', '')))
-
   print(lista)
 
 
