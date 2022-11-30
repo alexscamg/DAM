@@ -34,10 +34,9 @@ def por_ventas(resultado):
 
   lista = []
 
-  for n in resultado:
-    n +1
-      if "Roland Wacker" in dict[n]["customer_name"]:
-          lista.append(dict[n]["quantity"])
+  for n in resultado:                      # Iteramos el diccionario para sacar la info necesaria, hay que ver como ponerle los nombres automáticamente
+    if "Anna Bedecs" in resultado[n]["customer_name"]:
+        lista.append(int(resultado[n]["quantity"].replace('.', '')))
 
   print(lista)
 
