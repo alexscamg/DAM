@@ -1,15 +1,12 @@
 import csv
-
 """
-1. % de ventas de cada vendedor
-2. % sobre las ventas de cada cliente
-3. 5 prod mas vendidos
-4. Ingresos mensuales
+# 1. % de ventas de cada vendedor
+# 2. % sobre las ventas de cada cliente
+# 3. 5 prod mas vendidos
+# 4. Ingresos mensuales
 """
 
-
-
-RUTA_BASE = '/home/alejandro/Proyectos/Python_01/archivos/'
+RUTA_BASE = '/Users/alejandrosanchezcaballero/Desktop/DAM/Programacion/Python_01/archivos/'
 archivo = RUTA_BASE + 'cust_orders_prods.csv'
 
 resultado = {}
@@ -26,25 +23,23 @@ def leer_archivo():
     print(resultado)
 
 def por_ventas(resultado):
+  """
   total_cantidad = 0
   total_vendedor = 0
   for elem in resultado:                #accedemos a cada elemento de la lista (en este caso cada elemento es un diccionario)
     cantidad = elem['quantity']
     x = cantidad.replace('.', '')
     total_cantidad += int(x)
-  print(total_cantidad)
+  print(total_cantidad)"""
 
-  
-  for elem in resultado:
-    
-    vendedor = elem['employee_name']
-    total_vendedor = 0
-    cantidad_vendedor = elem['quantity']
-    x = cantidad_vendedor.replace('.', '')
-    total_vendedor += int(x)
-    print(f'{vendedor} ha vendido {total_vendedor}')
+  lista = []
 
+  for n in resultado:
+    n +1
+      if "Roland Wacker" in dict[n]["customer_name"]:
+          lista.append(dict[n]["quantity"])
 
+  print(lista)
 
 
 
