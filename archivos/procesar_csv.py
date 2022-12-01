@@ -43,7 +43,7 @@ def nombre_vendedores(resultado):
   
 def por_ventas(resultado):
   vendedores_cantidad = {}
-  for vendedores in resultado:
+  for vendedores in resultado:    # Contador para sumar
     vendedores_cantidad[resultado[vendedores]["employee_name"]] = int(resultado[vendedores]["quantity"].replace('.', ''))
   
   print(vendedores_cantidad)
