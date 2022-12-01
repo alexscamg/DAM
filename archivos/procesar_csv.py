@@ -6,44 +6,51 @@ import csv
 # 4. Ingresos mensuales
 """
 
-RUTA_BASE = '/Users/alejandrosanchezcaballero/Desktop/DAM/Programacion/Python_01/archivos/'
+RUTA_BASE = '/home/alejandro/Proyectos/Python_01/archivos/'
 archivo = RUTA_BASE + 'cust_orders_prods.csv'
 
-resultado = {}
 
 
-def leer_archivo():
+
+def leer_archivo(archivo):
+  resultado = {}
   contador = 0
   with open(archivo, 'r') as csv_file:
     lector = csv.DictReader(csv_file)
     for fila in lector:
       resultado[contador] = fila
       contador += 1
-
     print(resultado)
+  return resultado
 
-def por_ventas(resultado):
-  total_vendedor = 0
-  lista_cantidades = []
-  lista_vendedores = []
-  for n in resultado:       
-    nombre_vendedor = resultado[n]['customer_name']  
-    lista_vendedores.append(nombre_vendedor)
-    for i in lista_vendedores:            # Iteramos el diccionario para sacar la info necesaria, hay que ver como ponerle los nombres automáticamente
-      while i in resultado[n]["customer_name"]:
-          lista_cantidades.append(int(resultado[n]["quantity"].replace('.', '')))
-          break
-    for cantidad in lista_cantidades:
-      total_vendedor += cantidad
+def total(datos):
+  total = 0
+  for elem in datos:
+    cantidad = datos[elem]["quantity"].replace('.', '')
+    total += int(cantidad)
+  print(total)
 
+
+print()
+
+
+def nombre_vendedores(resultado):
+  vendedores_d = {}
+  for vendedores in resultado:
+    vendedores_d[resultado[vendedores]["employee_name"]] = 0
+  print(vendedores_d)
     
+  
+def por_ventas(resultado):
+  vendedores_cantidad = {}
+  for vendedores in resultado:
+    vendedores_cantidad[resultado[vendedores]["employee_name"]] = int(resultado[vendedores]["quantity"].replace('.', ''))
+  
+  print(vendedores_cantidad)
 
-  print(lista_cantidades)
-  print(lista_cantidades)
 
 
-
-
-
-leer_archivo()
-por_ventas(resultado)
+leer_archivo(archivo)
+nombre_vendedores(leer_archivo(archivo))
+total(leer_archivo(archivo))
+por_ventas(leer_archivo(archivo))
