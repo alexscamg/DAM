@@ -1,5 +1,4 @@
 import csv
-import re
 
 """
 # 1. % de ventas de cada vendedor
@@ -8,7 +7,7 @@ import re
 # 4. Ingresos mensuales
 """
 
-RUTA_BASE = '/Users/alejandrosanchezcaballero/Desktop/DAM/Programacion/Python_01/archivos/'
+RUTA_BASE = '/home/alejandro/Proyectos/Python_01/archivos/'
 archivo = RUTA_BASE + 'cust_orders_prods-cust_orders_prods.csv'
 
 
@@ -32,20 +31,25 @@ def total(datos):
     return total
 
 
-
-
-
 def nombre_vendedores(resultado):
     vendedores_d = []
     for vendedores in resultado:
         vendedores_d.append(resultado[vendedores]["employee_name"])
     return vendedores_d
 
+def nombre_clientes(resultado):
+    clientes_d = []
+    for clientes in resultado:
+        clientes_d.append(resultado[clientes]["customer_name"])
+    return clientes_d
 
+def nombre_productos(resultado):
+    productos_d = []
+    for productos in resultado:
+        productos_d.append(resultado[productos]["product_name"])
+    return productos_d
 
-
-
-def porcentaje(resultado, lista, total):
+def porcentaje_ventas(resultado, lista, total):
     vendedores = {}
     vendedores_por = {}
     suma = 0
@@ -61,8 +65,48 @@ def porcentaje(resultado, lista, total):
     print(vendedores)
     for persona in lista:
         porcentaje = (vendedores[persona]*100)/total
-        vendedores_por[persona] = porcentaje
+        vendedores_por[persona] = str(round(porcentaje, 2))+'%'
     print(vendedores_por)
+
+
+def porcentaje_clientes(resultado, lista, total):
+    clientes = {}
+    clientes_por = {}
+    suma = 0
+    for persona in lista:
+        try:
+            for indice in resultado:
+                if persona == resultado[indice]["customer_name"]:
+                    cantidad = resultado[indice]["quantity"]
+                    suma += int(cantidad)
+        finally:
+            clientes[persona] = suma
+            suma = 0
+    print(clientes)
+    for persona in lista:
+        porcentaje = (clientes[persona]*100)/total
+        clientes_por[persona] = str(round(porcentaje, 2))+'%'
+    print(clientes_por)
+
+def product(resultado, lista, total):
+    nombre_productos = {}
+    productos_cant = {}
+    suma = 0
+    for producto in lista:
+        try:
+            for indice in resultado:
+                if producto == resultado[indice]["product_name"]:
+                    cantidad = resultado[indice]["quantity"]
+                    suma += int(cantidad)
+        finally:
+            nombre_productos[producto] = suma
+            suma = 0
+    print(nombre_productos)
+    for persona in lista:
+        porcentaje = (nombre_productos[producto])
+        productos_cant[producto] = str(round(porcentaje, 2))
+    print(productos_cant)
+
 
 
 leer_archivo(archivo)
@@ -73,4 +117,9 @@ print()
 print()
 
 
-porcentaje(leer_archivo(archivo), nombre_vendedores(leer_archivo(archivo)), total(leer_archivo(archivo)))
+porcentaje_ventas(leer_archivo(archivo), nombre_vendedores(leer_archivo(archivo)), total(leer_archivo(archivo)))
+print()
+
+porcentaje_clientes(leer_archivo(archivo), nombre_clientes(leer_archivo(archivo)), total(leer_archivo(archivo)))
+
+product(leer_archivo(archivo), nombre_productos(leer_archivo(archivo)), total(leer_archivo(archivo)))
