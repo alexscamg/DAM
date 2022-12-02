@@ -107,11 +107,15 @@ def product(resultado, lista):
         porcentaje = (nombre_productos[producto])
         productos_cant[producto] = str(round(porcentaje, 2))
     print(productos_cant)
+    
 
-def facturacion(resultado, lista):
-
-
-
+def facturacion(resultado):
+  dict_meses = {"01": 0,"02": 0,"03": 0,"04": 0,"05": 0,"06": 0,"07": 0,"08": 0,"09": 0,"10": 0,"11": 0,"12": 0}
+  for n in resultado:
+      for mes in dict_meses:
+          if resultado[n]["order_date"][5:7] in mes:
+              dict_meses[mes] += int(resultado[n]["quantity"].replace(',','')) * int(resultado[n]["unit_price"].replace(',',''))
+  print(dict_meses)
 
 
 
@@ -135,3 +139,8 @@ print()
 porcentaje_clientes(leer_archivo(archivo), nombre_clientes(leer_archivo(archivo)), total(leer_archivo(archivo)))
 
 product(leer_archivo(archivo), nombre_productos(leer_archivo(archivo)))
+
+
+facturacion(leer_archivo(archivo))
+
+
