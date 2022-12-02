@@ -19,7 +19,6 @@ def leer_archivo(archivo):
         for fila in lector:
             resultado[contador] = fila
             contador += 1
-        print(resultado)
     return resultado
 
 
@@ -29,6 +28,7 @@ def total(datos):
         cantidad = datos[elem]["quantity"].replace('.', '')
         total += int(cantidad)
     print(total)
+    return total
 
 
 print()
@@ -44,8 +44,9 @@ def nombre_vendedores(resultado):
 print()
 
 
-def porcentaje(resultado, lista):
+def porcentaje(resultado, lista, total):
     vendedores = {}
+    vendedores_por = {}
     suma = 0
     for persona in lista:
         try:
@@ -57,7 +58,10 @@ def porcentaje(resultado, lista):
             vendedores[persona] = suma
             suma = 0
     print(vendedores)
-
+    for persona in lista:
+        porcentaje = (vendedores[persona]*100)/total
+        vendedores_por[persona] = porcentaje
+    print(vendedores_por)
 
 
 leer_archivo(archivo)
@@ -65,4 +69,4 @@ leer_archivo(archivo)
 # total(leer_archivo(archivo))
 
 
-porcentaje(leer_archivo(archivo), nombre_vendedores(leer_archivo(archivo)))
+porcentaje(leer_archivo(archivo), nombre_vendedores(leer_archivo(archivo)), total(leer_archivo(archivo)))
