@@ -6,7 +6,7 @@ import csv
 # 4. Ingresos mensuales
 """
 
-RUTA_BASE = '/home/alejandro/Proyectos/Python_01/archivos/'
+RUTA_BASE = '/Users/alejandrosanchezcaballero/Desktop/DAM/Programacion/Python_01/archivos/'
 archivo = RUTA_BASE + 'cust_orders_prods.csv'
 
 
@@ -35,12 +35,34 @@ print()
 
 
 def nombre_vendedores(resultado):
-  vendedores_d = {}
+  vendedores_d = []
   for vendedores in resultado:
-    vendedores_d[resultado[vendedores]["employee_name"]] = 0
-  print(vendedores_d)
+    vendedores_d.append(resultado[vendedores]["employee_name"])
+  return vendedores_d
     
+print()
   
+def porcentaje(resultado,lista):
+  vendedores = {}
+  suma = 0
+  for persona in lista:
+    try:
+      for indice in resultado:
+        if persona == resultado[indice]["employee_name"]:
+          cantidad = int(resultado[indice]["quantity"].replace('.', ''))
+          suma += cantidad
+        
+    finally:
+      vendedores[persona] = suma
+      suma = 0
+  print(vendedores)
+
+
+
+
+
+
+
 def por_ventas(resultado):
   vendedores_cantidad = {}
   for vendedores in resultado:    # Contador para sumar
@@ -51,6 +73,8 @@ def por_ventas(resultado):
 
 
 leer_archivo(archivo)
-nombre_vendedores(leer_archivo(archivo))
-total(leer_archivo(archivo))
-por_ventas(leer_archivo(archivo))
+#nombre_vendedores(leer_archivo(archivo))
+#total(leer_archivo(archivo))
+#por_ventas(leer_archivo(archivo))
+
+porcentaje(leer_archivo(archivo),nombre_vendedores(leer_archivo(archivo)))
