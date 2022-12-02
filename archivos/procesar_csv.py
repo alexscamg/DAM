@@ -103,10 +103,7 @@ def product(resultado, lista):
             nombre_productos[producto] = suma
             suma = 0
     print(nombre_productos)
-    for persona in lista:
-        porcentaje = (nombre_productos[producto])
-        productos_cant[producto] = str(round(porcentaje, 2))
-    print(productos_cant)
+    
     
 
 def facturacion(resultado):
@@ -138,8 +135,9 @@ print()
 
 porcentaje_clientes(leer_archivo(archivo), nombre_clientes(leer_archivo(archivo)), total(leer_archivo(archivo)))
 
+print()
 product(leer_archivo(archivo), nombre_productos(leer_archivo(archivo)))
-
+print()
 
 facturacion(leer_archivo(archivo))
 
