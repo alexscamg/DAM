@@ -1,5 +1,6 @@
 import csv
 
+
 """
 # 1. % de ventas de cada vendedor
 # 2. % sobre las ventas de cada cliente
