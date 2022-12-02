@@ -59,18 +59,10 @@ def porcentaje(resultado, lista):
     print(vendedores)
 
 
-def por_ventas(resultado):
-    vendedores_cantidad = {}
-    for vendedores in resultado:    # Contador para sumar
-        vendedores_cantidad[resultado[vendedores]["employee_name"]] = int(
-            resultado[vendedores]["quantity"].replace('.', ''))
-
-    print(vendedores_cantidad)
-
 
 leer_archivo(archivo)
 # nombre_vendedores(leer_archivo(archivo))
 # total(leer_archivo(archivo))
-# por_ventas(leer_archivo(archivo))
+
 
 porcentaje(leer_archivo(archivo), nombre_vendedores(leer_archivo(archivo)))
