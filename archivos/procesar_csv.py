@@ -1,4 +1,5 @@
 import csv
+import datetime
 
 """
 # 1. % de ventas de cada vendedor
@@ -88,7 +89,7 @@ def porcentaje_clientes(resultado, lista, total):
         clientes_por[persona] = str(round(porcentaje, 2))+'%'
     print(clientes_por)
 
-def product(resultado, lista, total):
+def product(resultado, lista):
     nombre_productos = {}
     productos_cant = {}
     suma = 0
@@ -107,6 +108,17 @@ def product(resultado, lista, total):
         productos_cant[producto] = str(round(porcentaje, 2))
     print(productos_cant)
 
+def facturacion(resultado, lista):
+
+
+
+
+
+
+
+
+
+
 
 
 leer_archivo(archivo)
@@ -122,4 +134,4 @@ print()
 
 porcentaje_clientes(leer_archivo(archivo), nombre_clientes(leer_archivo(archivo)), total(leer_archivo(archivo)))
 
-product(leer_archivo(archivo), nombre_productos(leer_archivo(archivo)), total(leer_archivo(archivo)))
+product(leer_archivo(archivo), nombre_productos(leer_archivo(archivo)))
