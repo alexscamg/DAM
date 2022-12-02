@@ -118,13 +118,63 @@ def facturacion(resultado):
 
 
 def menu():
-  print('MENU: ')
+  print('------MENU------- ')
   print('1. % de ventas de cada vendedor')
   print('2. % sobre las ventas de cada cliente')
   print('3. 5 prod mas vendidos')
   print('4. Ingresos mensuales')
 
+def main():
+  limpia_pantalla()
+  pinta_menu()
+  todos = leer_archivo()
 
+  while True: 
+
+      
+      opcion = int(input('Seleccione una opción: '))
+      if opcion == 1:
+          limpia_pantalla()
+          listar_tareas(todos)
+          pinta_menu()
+
+          
+
+      if opcion == 2:
+          nueva_tarea(todos)
+          escribir_tareas(todos)
+          todos = leer_archivo()
+          limpia_pantalla()
+          pinta_menu()
+
+      if opcion == 3:
+          numero = int(input('Introduzca el número de la tarea a editar: '))
+          editar_tarea(todos,numero)
+
+          escribir_tareas(todos)
+          todos = leer_archivo()
+          limpia_pantalla()
+          pinta_menu()
+
+      if opcion == 4:
+          numero = input('Introduzca el número de la tarea a borrar: ')
+          borrar_tarea(todos,numero)
+          escribir_tareas(todos)
+          todos = leer_archivo()
+          limpia_pantalla()
+          pinta_menu()
+
+
+      if opcion == 5:
+          numero = int(input('Introduzca el estado [0-> Pendiente, 1-> Hecho]: '))
+          estado = ESTADOS[numero]
+          limpia_pantalla()
+          listar_tareas (todos,estado)
+          pinta_menu()
+
+
+      if opcion == 6:
+          exit()
 
 
 leer_archivo(archivo)
@@ -146,4 +196,6 @@ print()
 
 facturacion(leer_archivo(archivo))
 
+print()
 
+menu()
