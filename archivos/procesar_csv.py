@@ -1,5 +1,4 @@
 import csv
-import datetime
 
 """
 # 1. % de ventas de cada vendedor
@@ -118,6 +117,12 @@ def facturacion(resultado):
 
 
 
+def menu():
+  print('MENU: ')
+  print('1. % de ventas de cada vendedor')
+  print('2. % sobre las ventas de cada cliente')
+  print('3. 5 prod mas vendidos')
+  print('4. Ingresos mensuales')
 
 
 
