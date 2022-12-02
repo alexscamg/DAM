@@ -1,5 +1,6 @@
 import csv
 import re
+
 """
 # 1. % de ventas de cada vendedor
 # 2. % sobre las ventas de cada cliente
@@ -31,7 +32,7 @@ def total(datos):
     return total
 
 
-print()
+
 
 
 def nombre_vendedores(resultado):
@@ -41,7 +42,7 @@ def nombre_vendedores(resultado):
     return vendedores_d
 
 
-print()
+
 
 
 def porcentaje(resultado, lista, total):
@@ -65,8 +66,11 @@ def porcentaje(resultado, lista, total):
 
 
 leer_archivo(archivo)
+print()
 # nombre_vendedores(leer_archivo(archivo))
+print()
 # total(leer_archivo(archivo))
+print()
 
 
 porcentaje(leer_archivo(archivo), nombre_vendedores(leer_archivo(archivo)), total(leer_archivo(archivo)))
