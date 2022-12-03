@@ -12,7 +12,7 @@ RUTA_BASE = '/Users/alejandrosanchezcaballero/Desktop/DAM/Programacion/Python_01
 archivo = RUTA_BASE + 'cust_orders_prods-cust_orders_prods.csv'
 
 
-def leer_archivo(archivo):
+def leer_archivo(archivo):              # Leer el archivo para procesar los datos
     resultado = {}
     contador = 0
     with open(archivo, 'r') as csv_file:
@@ -23,7 +23,7 @@ def leer_archivo(archivo):
     return resultado
 
 
-def total(datos):
+def total(datos):                     # Calcula el total de las cantidades
     total = 0
     for elem in datos:
         cantidad = datos[elem]["quantity"].replace('.', '')
@@ -32,25 +32,25 @@ def total(datos):
     return total
 
 
-def nombre_vendedores(resultado):
+def nombre_vendedores(resultado):           # Guarda el nombre de los vendedores en una lista
     vendedores_d = []
     for vendedores in resultado:
         vendedores_d.append(resultado[vendedores]["employee_name"])
     return vendedores_d
 
-def nombre_clientes(resultado):
+def nombre_clientes(resultado):           # Guarda el nombre de los vendedores en una lista
     clientes_d = []
     for clientes in resultado:
         clientes_d.append(resultado[clientes]["customer_name"])
     return clientes_d
 
-def nombre_productos(resultado):
+def nombre_productos(resultado):         # Guarda el nombre de los productos en una lista
     productos_d = []
     for productos in resultado:
         productos_d.append(resultado[productos]["product_name"])
     return productos_d
 
-def porcentaje_ventas(resultado, lista, total):
+def porcentaje_ventas(resultado, lista, total):           # Calcula el porcentaje de las ventas
     vendedores = {}
     vendedores_por = {}
     suma = 0
@@ -70,7 +70,7 @@ def porcentaje_ventas(resultado, lista, total):
     print(vendedores_por)
 
 
-def porcentaje_clientes(resultado, lista, total):
+def porcentaje_clientes(resultado, lista, total):                # Calcula el porcentaje de la ventas de los clientes
     clientes = {}
     clientes_por = {}
     suma = 0
@@ -89,7 +89,7 @@ def porcentaje_clientes(resultado, lista, total):
         clientes_por[persona] = str(round(porcentaje, 2))+'%'
     print(clientes_por)
 
-def product(resultado, lista):
+def product(resultado, lista):                       # Calcula las cantidades de productos que hay
     nombre_productos = {}
     productos_cant = {}
     suma = 0
@@ -106,7 +106,7 @@ def product(resultado, lista):
     
     
 
-def facturacion(resultado):
+def facturacion(resultado):             # Saca la facturación por mes
     dict_meses = {"01": 0,"02": 0,"03": 0,"04": 0,"05": 0,"06": 0,"07": 0,"08": 0,"09": 0,"10": 0,"11": 0,"12": 0}
     for n in resultado:
         for mes in dict_meses:
@@ -115,15 +115,17 @@ def facturacion(resultado):
     print(dict_meses)
 
 
-
-
-
-def menu():
+def pinta_menu():           # Pinta el menu
     print('------MENU------- ')
     print('1. % de ventas de cada vendedor')
     print('2. % sobre las ventas de cada cliente')
     print('3. 5 prod mas vendidos')
     print('4. Ingresos mensuales')
+    print('5. Salir')
+
+
+def limpia_pantalla():
+    os.system('clear')
 
 def main():
     limpia_pantalla()
@@ -163,6 +165,10 @@ def main():
             pinta_menu()
         if opcion == 6:
             exit()
+
+
+
+
 
 
 leer_archivo(archivo)
