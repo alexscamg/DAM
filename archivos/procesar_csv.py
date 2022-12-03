@@ -107,75 +107,62 @@ def product(resultado, lista):
     
 
 def facturacion(resultado):
-  dict_meses = {"01": 0,"02": 0,"03": 0,"04": 0,"05": 0,"06": 0,"07": 0,"08": 0,"09": 0,"10": 0,"11": 0,"12": 0}
-  for n in resultado:
-      for mes in dict_meses:
-          if resultado[n]["order_date"][5:7] in mes:
-              dict_meses[mes] += int(resultado[n]["quantity"].replace(',','')) * int(resultado[n]["unit_price"].replace(',',''))
-  print(dict_meses)
+    dict_meses = {"01": 0,"02": 0,"03": 0,"04": 0,"05": 0,"06": 0,"07": 0,"08": 0,"09": 0,"10": 0,"11": 0,"12": 0}
+    for n in resultado:
+        for mes in dict_meses:
+            if resultado[n]["order_date"][5:7] in mes:
+                dict_meses[mes] += int(resultado[n]["quantity"].replace(',','')) * int(resultado[n]["unit_price"].replace(',',''))
+    print(dict_meses)
 
 
 
 
 
 def menu():
-  print('------MENU------- ')
-  print('1. % de ventas de cada vendedor')
-  print('2. % sobre las ventas de cada cliente')
-  print('3. 5 prod mas vendidos')
-  print('4. Ingresos mensuales')
+    print('------MENU------- ')
+    print('1. % de ventas de cada vendedor')
+    print('2. % sobre las ventas de cada cliente')
+    print('3. 5 prod mas vendidos')
+    print('4. Ingresos mensuales')
 
 def main():
-  limpia_pantalla()
-  pinta_menu()
-  todos = leer_archivo()
-
-  while True: 
-
-      
-      opcion = int(input('Seleccione una opción: '))
-      if opcion == 1:
-          limpia_pantalla()
-          listar_tareas(todos)
-          pinta_menu()
-
-          
-
-      if opcion == 2:
-          nueva_tarea(todos)
-          escribir_tareas(todos)
-          todos = leer_archivo()
-          limpia_pantalla()
-          pinta_menu()
-
-      if opcion == 3:
-          numero = int(input('Introduzca el número de la tarea a editar: '))
-          editar_tarea(todos,numero)
-
-          escribir_tareas(todos)
-          todos = leer_archivo()
-          limpia_pantalla()
-          pinta_menu()
-
-      if opcion == 4:
-          numero = input('Introduzca el número de la tarea a borrar: ')
-          borrar_tarea(todos,numero)
-          escribir_tareas(todos)
-          todos = leer_archivo()
-          limpia_pantalla()
-          pinta_menu()
-
-
-      if opcion == 5:
-          numero = int(input('Introduzca el estado [0-> Pendiente, 1-> Hecho]: '))
-          estado = ESTADOS[numero]
-          limpia_pantalla()
-          listar_tareas (todos,estado)
-          pinta_menu()
-
-
-      if opcion == 6:
-          exit()
+    limpia_pantalla()
+    pinta_menu()
+    todos = leer_archivo()
+    while True: 
+        opcion = int(input('Seleccione una opción: '))
+        if opcion == 1:
+            limpia_pantalla()
+            listar_tareas(todos)
+            pinta_menu()
+        if opcion == 2:
+            nueva_tarea(todos)
+            escribir_tareas(todos)
+            todos = leer_archivo()
+            limpia_pantalla()
+            pinta_menu()
+        if opcion == 3:
+            numero = int(input('Introduzca el número de la tarea a editar: '))
+            editar_tarea(todos,numero)
+            escribir_tareas(todos)
+            todos = leer_archivo()
+            limpia_pantalla()
+            pinta_menu()
+        if opcion == 4:
+            numero = input('Introduzca el número de la tarea a borrar: ')
+            borrar_tarea(todos,numero)
+            escribir_tareas(todos)
+            todos = leer_archivo()
+            limpia_pantalla()
+            pinta_menu()
+        if opcion == 5:
+            numero = int(input('Introduzca el estado [0-> Pendiente, 1-> Hecho]: '))
+            estado = ESTADOS[numero]
+            limpia_pantalla()
+            listar_tareas (todos,estado)
+            pinta_menu()
+        if opcion == 6:
+            exit()
 
 
 leer_archivo(archivo)
