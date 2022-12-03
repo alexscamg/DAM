@@ -136,26 +136,24 @@ def main():
         opcion = int(input('Seleccione una opción: '))
         if opcion == 1:
             limpia_pantalla()
-            
+            porcentaje_ventas(leer_archivo(archivo), nombre_vendedores(
+                leer_archivo(archivo)), total(leer_archivo(archivo)))
             pinta_menu()
         if opcion == 2:
-            
             limpia_pantalla()
+            porcentaje_clientes(leer_archivo(archivo), nombre_clientes(
+                leer_archivo(archivo)), total(leer_archivo(archivo)))
             pinta_menu()
         if opcion == 3:
-            
             limpia_pantalla()
+            product(leer_archivo(archivo),
+                    nombre_productos(leer_archivo(archivo)))
             pinta_menu()
         if opcion == 4:
-            
             limpia_pantalla()
+            facturacion(leer_archivo(archivo))
             pinta_menu()
         if opcion == 5:
-            
-            limpia_pantalla()
-
-            pinta_menu()
-        if opcion == 6:
             exit()
 
 
@@ -169,7 +167,7 @@ print()
 print()
 
 
-porcentaje_ventas(leer_archivo(archivo), nombre_vendedores(leer_archivo(archivo)), total(leer_archivo(archivo)))
+# porcentaje_ventas(leer_archivo(archivo), nombre_vendedores(leer_archivo(archivo)), total(leer_archivo(archivo)))
 print()
 
 porcentaje_clientes(leer_archivo(archivo), nombre_clientes(leer_archivo(archivo)), total(leer_archivo(archivo)))
