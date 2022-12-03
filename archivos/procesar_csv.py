@@ -89,7 +89,8 @@ def porcentaje_clientes(resultado, lista, total):                # Calcula el po
         clientes_por[persona] = str(round(porcentaje, 2))+'%'
     print(clientes_por)
 
-def product(resultado, lista):                       # Calcula las cantidades de productos que hay
+def product(resultado, lista):                       # Calcula las cantidades de productos que hay, 
+                                                    #  ¡¡¡¡Falta hacer que saque los 5 que mas se han vendido!!!!
     nombre_productos = {}
     productos_cant = {}
     suma = 0
@@ -130,43 +131,32 @@ def limpia_pantalla():
 def main():
     limpia_pantalla()
     pinta_menu()
-    todos = leer_archivo()
+    datos = leer_archivo(archivo)
     while True: 
         opcion = int(input('Seleccione una opción: '))
         if opcion == 1:
             limpia_pantalla()
-            listar_tareas(todos)
+            
             pinta_menu()
         if opcion == 2:
-            nueva_tarea(todos)
-            escribir_tareas(todos)
-            todos = leer_archivo()
+            
             limpia_pantalla()
             pinta_menu()
         if opcion == 3:
-            numero = int(input('Introduzca el número de la tarea a editar: '))
-            editar_tarea(todos,numero)
-            escribir_tareas(todos)
-            todos = leer_archivo()
+            
             limpia_pantalla()
             pinta_menu()
         if opcion == 4:
-            numero = input('Introduzca el número de la tarea a borrar: ')
-            borrar_tarea(todos,numero)
-            escribir_tareas(todos)
-            todos = leer_archivo()
+            
             limpia_pantalla()
             pinta_menu()
         if opcion == 5:
-            numero = int(input('Introduzca el estado [0-> Pendiente, 1-> Hecho]: '))
-            estado = ESTADOS[numero]
+            
             limpia_pantalla()
-            listar_tareas (todos,estado)
+
             pinta_menu()
         if opcion == 6:
             exit()
-
-
 
 
 
