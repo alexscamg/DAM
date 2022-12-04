@@ -1,6 +1,7 @@
 import csv
 import pprint
 import os
+from heapq import nlargest
 
 """
 # 1. % de ventas de cada vendedor
@@ -103,8 +104,8 @@ def product(resultado, lista):                       # Calcula las cantidades de
         finally:
             nombre_productos[producto] = suma
             suma = 0
-
-    pprint.pprint(nombre_productos)
+    productos_mas_vendidos = nlargest(5, nombre_productos, key=nombre_productos.get)
+    pprint.pprint(f'Los 5 productos mas vendidos son: {productos_mas_vendidos}')
     
     
 
