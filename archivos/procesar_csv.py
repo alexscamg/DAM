@@ -1,5 +1,6 @@
 import csv
-
+import pprint
+import os
 
 """
 # 1. % de ventas de cada vendedor
@@ -28,7 +29,6 @@ def total(datos):                     # Calcula el total de las cantidades
     for elem in datos:
         cantidad = datos[elem]["quantity"].replace('.', '')
         total += int(cantidad)
-    print(total)
     return total
 
 
@@ -63,11 +63,10 @@ def porcentaje_ventas(resultado, lista, total):           # Calcula el porcentaj
         finally:
             vendedores[persona] = suma
             suma = 0
-    print(vendedores)
     for persona in lista:
         porcentaje = (vendedores[persona]*100)/total
         vendedores_por[persona] = str(round(porcentaje, 2))+'%'
-    print(vendedores_por)
+    pprint.pprint(vendedores_por)
 
 
 def porcentaje_clientes(resultado, lista, total):                # Calcula el porcentaje de la ventas de los clientes
@@ -83,16 +82,17 @@ def porcentaje_clientes(resultado, lista, total):                # Calcula el po
         finally:
             clientes[persona] = suma
             suma = 0
-    print(clientes)
+
     for persona in lista:
         porcentaje = (clientes[persona]*100)/total
         clientes_por[persona] = str(round(porcentaje, 2))+'%'
-    print(clientes_por)
+    pprint.pprint(clientes_por)
 
 def product(resultado, lista):                       # Calcula las cantidades de productos que hay, 
                                                     #  ¡¡¡¡Falta hacer que saque los 5 que mas se han vendido!!!!
     nombre_productos = {}
     productos_cant = {}
+    mas_5 = {}
     suma = 0
     for producto in lista:
         try:
@@ -103,7 +103,8 @@ def product(resultado, lista):                       # Calcula las cantidades de
         finally:
             nombre_productos[producto] = suma
             suma = 0
-    print(nombre_productos)
+
+    pprint.pprint(nombre_productos)
     
     
 
@@ -113,7 +114,7 @@ def facturacion(resultado):             # Saca la facturación por mes
         for mes in dict_meses:
             if resultado[n]["order_date"][5:7] in mes:
                 dict_meses[mes] += int(resultado[n]["quantity"].replace(',','')) * int(resultado[n]["unit_price"].replace(',',''))
-    print(dict_meses)
+    pprint.pprint(dict_meses)
 
 
 def pinta_menu():           # Pinta el menu
@@ -136,48 +137,25 @@ def main():
         opcion = int(input('Seleccione una opción: '))
         if opcion == 1:
             limpia_pantalla()
-            porcentaje_ventas(leer_archivo(archivo), nombre_vendedores(
-                leer_archivo(archivo)), total(leer_archivo(archivo)))
+            porcentaje_ventas(datos, nombre_vendedores(datos), total(datos))
             pinta_menu()
         if opcion == 2:
             limpia_pantalla()
-            porcentaje_clientes(leer_archivo(archivo), nombre_clientes(
-                leer_archivo(archivo)), total(leer_archivo(archivo)))
+            porcentaje_clientes(datos, nombre_clientes(datos), total(datos))
             pinta_menu()
         if opcion == 3:
             limpia_pantalla()
-            product(leer_archivo(archivo),
-                    nombre_productos(leer_archivo(archivo)))
+            product(datos,  nombre_productos(datos))
             pinta_menu()
         if opcion == 4:
             limpia_pantalla()
-            facturacion(leer_archivo(archivo))
+            facturacion(datos)
             pinta_menu()
         if opcion == 5:
             exit()
 
 
 
-
-leer_archivo(archivo)
-print()
-# nombre_vendedores(leer_archivo(archivo))
-print()
-# total(leer_archivo(archivo))
-print()
-
-
-# porcentaje_ventas(leer_archivo(archivo), nombre_vendedores(leer_archivo(archivo)), total(leer_archivo(archivo)))
-print()
-
-porcentaje_clientes(leer_archivo(archivo), nombre_clientes(leer_archivo(archivo)), total(leer_archivo(archivo)))
-
-print()
-product(leer_archivo(archivo), nombre_productos(leer_archivo(archivo)))
-print()
-
-facturacion(leer_archivo(archivo))
-
-print()
+main()
 
 
