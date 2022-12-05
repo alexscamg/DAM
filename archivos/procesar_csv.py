@@ -135,24 +135,24 @@ def main():
     pinta_menu()
     datos = leer_archivo(archivo)
     while True: 
-        opcion = int(input('Seleccione una opción: '))
-        if opcion == 1:
+        entrada = int(input('Seleccione una opción: '))
+        if entrada == 1:
             limpia_pantalla()
             porcentaje_ventas(datos, nombre_vendedores(datos), total(datos))
             pinta_menu()
-        if opcion == 2:
+        if entrada == 2:
             limpia_pantalla()
             porcentaje_clientes(datos, nombre_clientes(datos), total(datos))
             pinta_menu()
-        if opcion == 3:
+        if entrada == 3:
             limpia_pantalla()
             product(datos,  nombre_productos(datos))
             pinta_menu()
-        if opcion == 4:
+        if entrada == 4:
             limpia_pantalla()
             facturacion(datos)
             pinta_menu()
-        if opcion == 5:
+        if entrada == 5:
             exit()
 
 
