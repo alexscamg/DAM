@@ -10,7 +10,7 @@ from heapq import nlargest
 # 4. Ingresos mensuales
 """
 
-RUTA_BASE = '/Users/alejandrosanchezcaballero/Desktop/DAM/Programacion/Python_01/archivos/'
+RUTA_BASE = '/home/alejandro/Proyectos/Python_01/archivos/'
 archivo = RUTA_BASE + 'cust_orders_prods-cust_orders_prods.csv'
 
 
