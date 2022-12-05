@@ -1,4 +1,4 @@
-RUTA_BASE = '/home/alejandro/Proyectos/Python_01/archivos/'
+RUTA_BASE = '/Users/alejandrosanchezcaballero/Desktop/DAM/Programacion/Python_01/archivos/'
 archivo = RUTA_BASE + 'datos_03.txt'
 
 datos =  [
