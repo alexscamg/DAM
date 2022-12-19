@@ -16,3 +16,8 @@ def cuenta_vocales(texto):
 
 
 print(cuenta_vocales(texto))
+
+
+
+
+print('you are doing well' [2:999])
