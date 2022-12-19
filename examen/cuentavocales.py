@@ -8,9 +8,7 @@ def cuenta_vocales(texto):
   for i in texto:
     i = i.lower()
     if i in vocales and i not in vocales_texto:
-      vocales_texto.append(i)
-    
-    
+      vocales_texto.append(i) 
   return vocales_texto
 
 
@@ -21,3 +19,5 @@ print(cuenta_vocales(texto))
 
 
 print('you are doing well' [2:999])
+
+print('you are doing well' [9:100])
