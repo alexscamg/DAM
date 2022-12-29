@@ -2,8 +2,8 @@ import pprint
 
 # Diccionarios
 diccionario ={
-     'uno': 'Primero', # Clave= 'uno' Valor= 'Primero'
-     'dos': 'Segundo'
+    'uno': 'Primero', # Clave= 'uno' Valor= 'Primero'
+    'dos': 'Segundo'
 
 }
 print(diccionario['uno']) # Aqui buscamos la clave y nos devuleve el valor
